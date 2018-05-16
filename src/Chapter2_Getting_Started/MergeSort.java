@@ -5,34 +5,34 @@ import java.util.Scanner;
 public class MergeSort {
 
     public static int[] Merge(int[] A, int start, int mid, int end){
-        int n1 = (mid - start) + 1;
+        int n1 = mid - start + 1;
         int n2 = end - mid;
 
         int[] L = new int[n1+1];
         int[] R = new int[n2+1];
 
         // populate the left deck
-        for(int i = 0; i < L.length; i++){
+        for(int i = 0; i < L.length-1; i++){
             L[i] = A[(start + i) /*- 1*/];
         }
 
         // populate the right deck
-        for (int j = 0; j < R.length; j++){
-            R[j] = A[mid + j];
+        for (int j = 0; j < R.length-1; j++){
+            R[j] = A[(mid + 1) + j];
         }
 
         // set the sentinel values
-        L[n1] = -1;
-        R[n2] = -1;
+        L[n1] =/* -1*/ Integer.MAX_VALUE;
+        R[n2] = /*-1*/ Integer.MAX_VALUE;
 
         int i = 0;
         int j = 0;
 
-        for(int k = start; k < end; k++){
-            if(L[i] <= R[j]){
+        for(int k = start; k <= end; k++){
+            if(L[i] <= R[j] /*&& L[i] != -1*/){
                     A[k] = L[i];
                     i++;
-            }else{
+            }else /*if(R[j] != -1)*/{
                 A[k] = R[j];
                 j++;
             }
@@ -44,11 +44,16 @@ public class MergeSort {
     public static int[] MergeSort(int[] A, int start, int end){
         if(start < end){
             int mid = Math.floorDiv((start + end), 2);
+            //Actually split the sequence A in half and pass a local copy of it B to the recursion
+            /*int[] B = new int[mid+1];
+            for(int i = start; i <= mid; i++){
+                B[i] = A[i];
+            }*/
             MergeSort(A, start, mid);
             MergeSort(A, mid+1, end);
             Merge(A, start, mid, end);
         }
-        return A;
+        return A ;
     }
 
     public static void main(String[] args){
@@ -62,9 +67,9 @@ public class MergeSort {
 
         int[] sortedArray = MergeSort(sequence, 0, sequence.length-1);
 
-        System.out.print("\nThe sorted sequence is: " );
-        for(int i = 0; i < sortedArray.length; i++){
-            System.out.print(sortedArray[i] + " ");
+        System.out.println("The sorted sequence is: " );
+        for(int i: sortedArray) {
+            System.out.println(i);
         }
 
     }
