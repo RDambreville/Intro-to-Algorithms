@@ -56,14 +56,21 @@ public class MergeSort {
         return A ;
     }
 
-    public static void main(String[] args){
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter the number of integers in the sequence: ");
-        int[] sequence = new int[scanner.nextInt()];
-        System.out.println("Enter the sequence one integer at a time with a single space between consecutive characters: \n");
+    public static void main(int[] sequence/*String[] args*/){
+        //Scanner scanner = new Scanner(System.in);
+        //System.out.print("Enter the number of integers in the sequence: ");
+        //int[] sequence = new int[scanner.nextInt()];
+        //int[] sequence = new int[args[1].length()];
+
+       /* char[] charSequence = args[1].toCharArray();
+        int[]  sequence = new int[charSequence.length];
+        //System.out.println("Enter the sequence one integer at a time with a single space between consecutive characters: \n");
         for(int i = 0; i < sequence.length; i++){
-            sequence[i] = scanner.nextInt();
-        }
+            //sequence[i] = scanner.nextInt();
+            //sequence[i] = Integer.parseInt(args[1].charAt(i));
+            sequence[i] = charSequence[i] - '0';
+
+        }*/
 
         int[] sortedArray = MergeSort(sequence, 0, sequence.length-1);
 
