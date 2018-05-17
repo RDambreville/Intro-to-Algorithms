@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a24a5cfc-f3a4-4258-956d-db373923fb49" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Chapter4_Divide_and_Conquer/FindMaxSubarray.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Chapter4_Divide_and_Conquer/SquareMatrixMultiply.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MainEntry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IntroToAlgorithms/Chapter2_Getting_Started/InsertionSort.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IntroToAlgorithms/Chapter2_Getting_Started/InsertionSort.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/IntroToAlgorithms/Chapter2_Getting_Started/MergeSort.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/IntroToAlgorithms/Chapter2_Getting_Started/MergeSort.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Chapter2_Getting_Started/InsertionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chapter2_Getting_Started/InsertionSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Chapter2_Getting_Started/MergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Chapter2_Getting_Started/MergeSort.java" afterDir="false" />
-    </list>
+    <list default="true" id="a24a5cfc-f3a4-4258-956d-db373923fb49" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
