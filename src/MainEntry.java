@@ -13,7 +13,7 @@ public class MainEntry{
 
         Scanner scan = new Scanner(System.in);
         System.out.print("Enter the number of integers in your sequence: ");
-        int[] sequence = new int[scan.nextInt()];
+        long[] sequence = new long[scan.nextInt()];
         System.out.println("Enter the sequence of integers you would like to sort (include a space between integers): ");
         for(int i = 0; i < sequence.length; i++){
             sequence[i] = scan.nextInt();
@@ -22,11 +22,11 @@ public class MainEntry{
         for(int i = 0; i < listOfAlgorithms.size(); i++){
             System.out.println(listOfAlgorithms.get(i));
         }
-        int selection = scan.nextInt();
+        /*int selection = scan.nextInt();
 
         switch(selection){
             case 1:
-                InsertionSort.main(sequence);
+                //InsertionSort.main(sequence);
                 break;
 
             case 2:
@@ -34,8 +34,8 @@ public class MainEntry{
                 break;
 
             case 3:
-                FindMaxSubarray.main(sequence);
+                //FindMaxSubarray.main(sequence);
                 break;
-        }
+        }*/
     }
 }

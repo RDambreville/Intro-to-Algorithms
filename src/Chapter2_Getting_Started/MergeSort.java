@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class MergeSort {
 
+    static int inversions = 0;
+
     public static int[] Merge(int[] A, int start, int mid, int end){
         int n1 = mid - start + 1;
         int n2 = end - mid;
@@ -34,6 +36,14 @@ public class MergeSort {
                     i++;
             }else /*if(R[j] != -1)*/{
                 A[k] = R[j];
+                if(L[i] != Integer.MAX_VALUE){
+                    // subtract 2 from  R.length to account for the sentinel value at the end of the array
+                    int positionOfItemToBeSwapped = mid + (R.length-2) + j;
+                    if(mid == 0){
+                        positionOfItemToBeSwapped++;
+                    }
+                    inversions += positionOfItemToBeSwapped - k /*mid + (R.length-1) + j*/ /*end-k*/ /*inversions++*/;
+                }
                 j++;
             }
         }
@@ -78,6 +88,8 @@ public class MergeSort {
         for(int i: sortedArray) {
             System.out.println(i);
         }
+
+        System.out.println("Inversions: " + inversions);
 
     }
 }
